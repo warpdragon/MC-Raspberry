@@ -20,9 +20,10 @@ So why not just make a modpack using existing mods? Because I would like them co
 - Hostile Mobs don't spawn near villagers
 - Villagers can defend themselves against hostile mobs
 
-## Graphics (modern)
+## Graphics/performance (modern)
 
 - Optifine
+- Fastcraft/foamfix
 - Shaders
 - Textures
 
