@@ -19,11 +19,13 @@ The project will probably be based on whichever version of Minecraft has the lat
 
 ## Features
 
-### Villager AI
+### SYSTEMS
+
+#### Villager AI
 
 New features such will require particluar attention to chunk-handling. Villagers and their metadata may have to be handled in new ways to support AI, an example of a mod that features villager AI is "Citizens".
 
-### Conduits
+#### Conduits
 
 Currently, Vanilla minecraft has no pipe, wire, or conduit system. The introduction of such a system would require some very high-level logic regarding memory handling. The proposed system would be mechanically identical to Extra Utilities pipes.
 
@@ -34,7 +36,7 @@ Conduits would be easily crafted from iron and glass. Special connectors (referr
 
 Other pipes would be sorting conduits and filtering conduits. All of these would be easily craftable on a vanilla crafting table.
 
-### Power
+#### Power
 
 New generators can be built to create power:
 - Windmills (require height and adjacent air blocks)
@@ -42,39 +44,11 @@ New generators can be built to create power:
 - Engines (require fuel such as coal)
 Vanilla machines can be upgraded to accept power as fuel instead of coal. New machines can also be upgraded to accept power as fuel instead of coal. Vehicles can be upgraded to accept batteries (stored power) as fuel instead of coal. Batteries and generators will be easily craftable from basic materials.
 
-### Enhanced Rail
+#### Enhanced Rail
 
 Currently, rail cars that pass out of player-space have their positions stored in memory and are removed from the game. Enhanced Rail would essentially keep the rail cars in the game while they're active, loading chunks as the car passes through them. Enhanced Rail system would also have powered train engines as well as utilizing the new wrench to connect rail cars.
 
-### New vehicles
-
-Currently, minecarts, mobs, and boats are the only means of transportation aside from walking. We propose the addition of several new forms of transportation. Created in a vanilla crafting bench, these can be placed in the world identically to vanilla boats. They can be mounted identically to vanilla boats. 
-
-A new tool, the wrench, will allow players to interface with all minecraft vehicles in order to add fuel and/or activate them.
-
-Among these new vehicles will be a balloon, specializing in up/down movement, a submarine, capable of going underwater, a powered railcar, a car or bike, a flying machine and/or hangglider. These vehicles will have limited durability and require fuel. They will be repairable on an anvil similarly to tools.
-
-### Inventory Sorting
-
-In vanilla, player inventory is small and unorganized. Two very important improvements offer a simple solution to this. The first is inventory sorting. Inventory sorting would be done with a button, or several buttons, at the top of the player's inventory. It would simply group items by type and line them up.
-
-### Backpack
-
-Secondly, a new slot in the player's "wearables" bar would allow for crafting and wearing a "backpack". This backpack would simply create new inventory slots for the player. The backpack could be replaced with a more advanced backpack later to create even more slots.
-
-### Improved Item stacking
-
-Some items (eggs and other things) may only stack up to 16. These should only require a quick update so that they can be stacked up to 64. Some other items, chief among them tools (fishing poles, crafting benches, buckets, swords) cannot be stacked at all. These will likely be trickier to fix, but it would be nice if they were stackable as well.
-
-### Modified Recipes
-
-Currently, players are forced to travel to other dimensions to craft certain recipes. I propose this not be the case. Additional recipes should be included to offer alternative ways to craft such things.
-
-### Incinerator
-
-Introducing a new functional block. Rather than introducing a "delete item button" into the UI, I propose a new block called the "incinerator" which requires fuel to burn items.
-
-### Magic
+#### Magic
 
 A new item called the Magic Wand will be craftable from basic materials. It will be craftable in various qualities just like minecraft tools, each higher quality having improved performance over the previouis. The magic wand will have a hotkey-triggered UI wheel where you can select any of your learned spells. Spells require durability to cast. Durability renews passively and can be fully recharged at the Arcane Altar. Magic wands do not break when depleted.
 
@@ -82,56 +56,84 @@ A new block called the Arcane Altar will be craftable from basic materials and i
 
 Spells include teleportation, ranged attack, ranged disable, and ranged heal.
 
-### Cartography
+#### Maps
 
 We are replacing the vanilla map with a new one using the same recipe. Maps will not be combineable, as before. Instead, they will update with new information as the player travels. While in the player's inventory, the map will display a minimap on the corner of the screen. If destroyed, the player can create a new map that will have the same information.
 
-### Roofing
-
-Vanilla minecraft rooves are very frustrating to build. They require tedious placement of stairs and slabs and can result in player death and are an insane investment of materials
-
-Multiblock building components would be a nice solution. 2, 3, 4, 5, and 6 block-long stairs/slabs would make long rooves much easier to build/destroy 
-
-### Redstone Improvements
+#### Redstone Improvements
 
 - New advanced redstone components
 - Long range redstone signals
+- Custom Command Blocks
 
-### Dimensions
+#### Roofing
 
-- Interdimensional travel optional
-- Substitute recipes added
+Vanilla minecraft rooves are very frustrating to build. They require tedious placement of stairs and slabs and can result in player death and are an insane investment of materials
 
-### Clocks (item)
+#### Vehicles
 
-Clocks will simply display a clock on the user's screen while in their inventory.
+Currently, minecarts, mobs, and boats are the only means of transportation aside from walking. We propose the addition of several new forms of transportation. Created in a vanilla crafting bench, these can be placed in the world identically to vanilla boats. They can be mounted identically to vanilla boats. 
 
-### Sieve (block)
+A new tool, the wrench, will allow players to interface with all minecraft vehicles in order to add fuel and/or activate them.
 
-Enable players to find small items in dirt, sand, or gravel
+Among these new vehicles will be a balloon, specializing in up/down movement, a submarine, capable of going underwater, a powered railcar, a car or bike, a flying machine and/or hangglider. These vehicles will have limited durability and require fuel. They will be repairable on an anvil similarly to tools.
 
-### Hammer (tool/item)
+### INVENTORY
 
-Enable players to break stone into gravel, gravel into sand
+#### Inventory Sorting
 
-### Diving Helmet (wearable/item)
+In vanilla, player inventory is small and unorganized. Two very important improvements offer a simple solution to this. The first is inventory sorting. Inventory sorting would be done with a button, or several buttons, at the top of the player's inventory. It would simply group items by type and line them up.
 
-Enable players to breath underwater, durability reduces more the deeper you go.
+#### Backpack
 
-### Liquid Tank
+Secondly, a new slot in the player's "wearables" bar would allow for crafting and wearing a "backpack". This backpack would simply create new inventory slots for the player. The backpack could be replaced with a more advanced backpack later to create even more slots.
 
-Stores one type of liquid.
+#### Improved Item stacking
 
-### Scaffold
+Some items (eggs and other things) may only stack up to 16. These should only require a quick update so that they can be stacked up to 64. Some other items, chief among them tools (fishing poles, crafting benches, buckets, swords) cannot be stacked at all. These will likely be trickier to fix, but it would be nice if they were stackable as well.
 
-Stackable block that can be climbed like a ladder. The whole stack can be destroyed by breaking the bottom block. The stack can be raised by building on to the bottom block.
+#### Modified Recipes
 
-### Added recipes
+Currently, players are forced to travel to other dimensions to craft certain recipes. I propose this not be the case. Additional recipes should be included to offer alternative ways to craft such things.
+
+#### Added recipes
 
 - String - Made from wool
 - Horse armor - Made from armor materials
 
-### World
+### MISCELLANEOUS
+
+#### Incinerator
+
+Introducing a new functional block. Rather than introducing a "delete item button" into the UI, I propose a new block called the "incinerator" which requires fuel to burn items.
+
+Multiblock building components would be a nice solution. 2, 3, 4, 5, and 6 block-long stairs/slabs would make long rooves much easier to build/destroy 
+
+#### Clocks (item)
+
+Clocks will simply display a clock on the user's screen while in their inventory.
+
+#### Sieve (block)
+
+Enable players to find small items in dirt, sand, or gravel
+
+#### Hammer (tool/item)
+
+Enable players to break stone into gravel, gravel into sand
+
+#### Diving Helmet (wearable/item)
+
+Enable players to breath underwater, durability reduces more the deeper you go.
+
+#### Liquid Tank
+
+Stores one type of liquid.
+
+#### Scaffold
+
+Stackable block that can be climbed like a ladder. The whole stack can be destroyed by breaking the bottom block. The stack can be raised by building on to the bottom block.
+
+### WORLD
 
 #### World-gen
 
