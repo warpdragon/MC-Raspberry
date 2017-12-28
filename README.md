@@ -70,6 +70,8 @@ We are replacing the vanilla map with a new one using the same recipe. Maps will
 
 Vanilla minecraft rooves are very frustrating to build. They require tedious placement of stairs and slabs and can result in player death and are an insane investment of materials
 
+Multiblock building components would be a nice solution. 2, 3, 4, 5, and 6 block-long stairs/slabs would make long rooves much easier to build/destroy 
+
 #### Vehicles
 
 Currently, minecarts, mobs, and boats are the only means of transportation aside from walking. We propose the addition of several new forms of transportation. Created in a vanilla crafting bench, these can be placed in the world identically to vanilla boats. They can be mounted identically to vanilla boats. 
@@ -103,35 +105,39 @@ Currently, players are forced to travel to other dimensions to craft certain rec
 
 ### MISCELLANEOUS
 
-#### Incinerator
+#### Blocks
 
-Introducing a new functional block. Rather than introducing a "delete item button" into the UI, I propose a new block called the "incinerator" which requires fuel to burn items.
-
-Multiblock building components would be a nice solution. 2, 3, 4, 5, and 6 block-long stairs/slabs would make long rooves much easier to build/destroy 
-
-#### Clocks (item)
-
-Clocks will simply display a clock on the user's screen while in their inventory.
-
-#### Sieve (block)
+##### Sieve
 
 Enable players to find small items in dirt, sand, or gravel
 
-#### Hammer (tool/item)
+##### Incinerator
 
-Enable players to break stone into gravel, gravel into sand
+Introducing a new functional block. Rather than introducing a "delete item button" into the UI, I propose a new block called the "incinerator" which requires fuel to burn items.
 
-#### Diving Helmet (wearable/item)
-
-Enable players to breath underwater, durability reduces more the deeper you go.
-
-#### Liquid Tank
+##### Liquid Tank
 
 Stores one type of liquid.
 
-#### Scaffold
+##### Scaffold
 
 Stackable block that can be climbed like a ladder. The whole stack can be destroyed by breaking the bottom block. The stack can be raised by building on to the bottom block.
+
+#### Items
+
+##### Clock
+
+Clocks will simply display a clock on the user's screen while in their inventory.
+
+##### Hammer
+
+Enable players to break stone into gravel, gravel into sand
+
+##### Diving Helmet
+
+Enable players to breath underwater, durability reduces more the deeper you go.
+
+
 
 ### WORLD
 
