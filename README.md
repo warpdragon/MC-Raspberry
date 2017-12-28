@@ -63,8 +63,10 @@ So why not just make a modpack using existing mods? Because I would like them co
 
 - Destroys items, uses fuel
 
-#### Magic wand - Basically a multifunction tool
+#### Magic wand - Basically a multifunction & adventuring tool
 
+- Using spells uses durability
+- Tool becomes depleted at 0 durability and must be recharged at arcane altar
 - Teleport
 - Attack
 - Disable
