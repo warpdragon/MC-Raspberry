@@ -1,5 +1,13 @@
 # Minecraft Project Raspberry
 
+## Intro
+
+It's a mod for people who dont' like the complexity of massive modpacks, but want new functionality and quality of life improvements for vanilla. It's a mod to make vanilla better. What it has: power, tweaks to vanilla, transportation options, construction improvements. What it doesn't have: extreme vertical progression, complicated recipes, unexplained things.
+
+I'm not a programmer, but I can follow tutorials. The following features, taken separately, range from very simple (new recipes) to somewhat complex (new power systems, AI improvements). But they've all been done before. Every feature I'm listing has been done by vanilla or by some mod.
+
+So why not just make a modpack using existing mods? Because I would like them contained inside a single mod built from the ground up to do exactly what we want, and only what we want.
+
 ## Player Guide
 
 - Fully documented recipes
