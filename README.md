@@ -1,251 +1,156 @@
 # Minecraft Project Raspberry
 
-## Intro
+## Introduction
 
-It's a mod for people who dont' like the complexity of massive modpacks, but want new functionality and quality of life improvements for vanilla. It's a mod to make vanilla better. What it has: power, tweaks to vanilla, transportation options, construction improvements. What it doesn't have: extreme vertical progression, complicated recipes, unexplained things.
+It's a mod for people who dont' like the complexity of massive modpacks, but want new functionality and quality of life improvements for vanilla. It's a mod to make vanilla better. What it has: light engineering, magic, tweaks to vanilla, transportation options, construction improvements. What it doesn't have: extreme vertical progression, complicated recipes, unexplained things.
 
-I'm not a programmer, but I can follow tutorials. The following features, taken separately, range from very simple (new recipes) to somewhat complex (new power systems, AI improvements). But they've all been done before. Every feature I'm listing has been done by vanilla or by some mod.
+I'm not a programmer, but I can follow tutorials. The following features, taken separately, range from very simple (new recipes) to somewhat complex (new power systems, AI improvements), but they've all been done before. Every feature I'm listing has been done by either vanilla in some form or by some mod.
 
-So why not just make a modpack using existing mods? Because I would like them contained inside a single/few mod(s) built from the ground up to do exactly what we want, and only what we want. This would result in increased performance and allow for shaders and high-res texture packs. 
+So why not just make a modpack using existing mods? Because I would like them contained inside a single/few mod(s) built from the ground up to do exactly what we want, and only what we want. By keeping everything in a lightweight package, we can achieve increased performance over other modpacks which will allow for the use of GL shaders and high-res texture packs.
 
-## 1. Performance
+# Project Outline
 
-### Mods
+## Performance
 
+The project will probably be based on whichever version of Minecraft has the latest Forge (currently 1.11.2). Due to the lightweight nature of the project, higher-end computers should be able to make use of Optifine's GL Shader support as well as Minecraft's high-resolution texture support. For added performance, we will want to stack a few mods on top of the installation:
 - Optifine
 - Fastcraft
 - Foamfix
 
-### Packs
+## Features
 
-- GL shaderpacks
-- Hi-res texturepacks
+### Villager AI
 
-### Chunkloading
-
-- Makes power transmission possible
-- Makes large arrays of machines possible
-- Makes large scale rail possible
-
-## 2. UI
-
-### Playerguide
-
-- In player’s inventory at start of game
-- Outlines all recipes
-- Explains all mechanics
-
-### New recipes
-
-- All simple and easy to remember
-
-### Inventory
-
-#### Basic Improvements
-
-- Inventory sorting
-
-#### Backpack - New slot for backpack
-
-- Backpack can be improved using better and better materials
-- Backpack simply increases your inventory size
-
-#### Inventory
-
-#### Item stacking
-
-- All items stack to 64
-- Tools with full health stack to 64
-
-### New Items/blocks needing UI
-
-#### Incinerator
-
-- Destroys items, uses fuel
-
-#### Magic wand - Basically a multifunction & adventuring tool
-
-- Using spells uses durability
-- Tool becomes depleted at 0 durability and must be recharged at arcane altar
-- Teleport
-- Attack
-- Disable
-- Heal
-
-#### Cartography Table
-
-- A map UI similar to Journeymap
-
-#### Arcane Altar
-
-- A crafting bench that requires XP and materials to craft spells
-
-#### Workbench interface
-
-- A crafting bench that requires some resource (time/fuel?) in order to craft
-
-#### Vehicle UI
-
-- When you rightclick on a vehicle with a wrench, it should open a UI for fuel
-
-#### Villager UI
-
-- When you rightclick on a villager, it should open a UI for home/job
-
-### Existing items/blocks needing improved UI
-
-- Maps - Minimap/waypoints
-- Clock - Visible clock in UI
-- Enchanting - More control over enchantments
-
-## 3. AI
-
-### Villagers
-
-- Villagers can be assigned a home and a job
-- Villagers can use chests
-- Villagers can defend themselves against hostile mobs.
-
-### Hostile Mobs
-
-- Hostile mobs dont’ spawn near villagers
-
-## 4. Transmission
-
-### New form of power (watts)
-
-### New ore
-
-- Copper
+New features such will require particluar attention to chunk-handling. Villagers and their metadata may have to be handled in new ways to support AI, an example of a mod that features villager AI is "Citizens".
 
 ### Conduits
 
-- Made from Copper
-- Carry power to/from generators/machines
-- Carry items to/from inventory
-- Carry liquids to/from tanks
+Currently, Vanilla minecraft has no pipe, wire, or conduit system. The introduction of such a system would require some very high-level logic regarding memory handling. The proposed system would be mechanically identical to Extra Utilities pipes.
 
-### New blocks store liquids
+Conduits would be easily crafted from iron and glass. Special connectors (referred to as nodes in EU) would give conduits the ability to do the following:
+- item connectors - pull from adjacent inventories and search for connected inventories to deposit them into
+- liquid connectors - pull liquid from adjacent blocks and search for connected tanks to deposit them into
+- power connectors - pull power (watts) from adjacent blocks and search for connected batteries or machines to deposit it into
 
-- Tank
+Other pipes would be sorting conduits and filtering conduits. All of these would be easily craftable on a vanilla crafting table.
 
-### New blocks generate power
+### Power
 
-- Waterwheel
-- Engine
-- Windmill
+New generators can be built to create power:
+- Windmills (require height and adjacent air blocks)
+- Waterwheels (require adjacent water source blocks)
+- Engines (require fuel such as coal)
+Vanilla machines can be upgraded to accept power as fuel instead of coal. New machines can also be upgraded to accept power as fuel instead of coal. Vehicles can be upgraded to accept batteries (stored power) as fuel instead of coal. Batteries and generators will be easily craftable from basic materials.
 
-### New vehicles require fuel
+### Enhanced Rail
 
-## 5. Construction
-
-### Multiblock structures
-
-- Larger furnaces
-- Work faster
-- Can use power
-
-### Multiblock Generators
-
-- Waterwheel - uses water
-- Windmill - uses wind
-- Engine - uses fuel
-
-### Scaffolding
-
-- Can be destroyed by destroying bottom block
-- Can be raised by building from bottom block
-
-### Better roof building
-
-- Place Planks in a row (long planks)
-- Place Slabs in a row (long slabs)
-- Place stairs in a row (long stairs)
-
-## 6. Transportation
+Currently, rail cars that pass out of player-space have their positions stored in memory and are removed from the game. Enhanced Rail would essentially keep the rail cars in the game while they're active, loading chunks as the car passes through them. Enhanced Rail system would also have powered train engines as well as utilizing the new wrench to connect rail cars.
 
 ### New vehicles
 
-- All vehicle have period-appearance (no futuristic models)
-- Glider - Cheap but breakable
-- Balloon - Float
-- Submarine - Underwater exploration
-- Car/bike - Faster travel on land
-- Flying-machine - Faster travel in sky
-- Many vehicles have limited durability and require fuel
+Currently, minecarts, mobs, and boats are the only means of transportation aside from walking. We propose the addition of several new forms of transportation. Created in a vanilla crafting bench, these can be placed in the world identically to vanilla boats. They can be mounted identically to vanilla boats. 
 
-### Rails
+A new tool, the wrench, will allow players to interface with all minecraft vehicles in order to add fuel and/or activate them.
 
-- Cheaper
-- Powered trains
-- Link trains together using wrench
+Among these new vehicles will be a balloon, specializing in up/down movement, a submarine, capable of going underwater, a powered railcar, a car or bike, a flying machine and/or hangglider. These vehicles will have limited durability and require fuel. They will be repairable on an anvil similarly to tools.
 
-## 7. Redstone
+### Inventory Sorting
 
-- Easier
-- Custom commandblocks
-- Longer-range redstone transmission
-- New redstone functionblocks
+In vanilla, player inventory is small and unorganized. Two very important improvements offer a simple solution to this. The first is inventory sorting. Inventory sorting would be done with a button, or several buttons, at the top of the player's inventory. It would simply group items by type and line them up.
 
-## 8. Dimensions
+### Backpack
+
+Secondly, a new slot in the player's "wearables" bar would allow for crafting and wearing a "backpack". This backpack would simply create new inventory slots for the player. The backpack could be replaced with a more advanced backpack later to create even more slots.
+
+### Improved Item stacking
+
+Some items (eggs and other things) may only stack up to 16. These should only require a quick update so that they can be stacked up to 64. Some other items, chief among them tools (fishing poles, crafting benches, buckets, swords) cannot be stacked at all. These will likely be trickier to fix, but it would be nice if they were stackable as well.
+
+### Modified Recipes
+
+Currently, players are forced to travel to other dimensions to craft certain recipes. I propose this not be the case. Additional recipes should be included to offer alternative ways to craft such things.
+
+### Incinerator
+
+Introducing a new functional block. Rather than introducing a "delete item button" into the UI, I propose a new block called the "incinerator" which requires fuel to burn items.
+
+### Magic
+
+A new item called the Magic Wand will be craftable from basic materials. It will be craftable in various qualities just like minecraft tools, each higher quality having improved performance over the previouis. The magic wand will have a hotkey-triggered UI wheel where you can select any of your learned spells. Spells require durability to cast. Durability renews passively and can be fully recharged at the Arcane Altar. Magic wands do not break when depleted.
+
+A new block called the Arcane Altar will be craftable from basic materials and is used to craft spells. Spells use special recipes requiring XP to craft.
+
+Spells include teleportation, ranged attack, ranged disable, and ranged heal.
+
+### Cartography
+
+We are replacing the vanilla map with a new one using the same recipe. Maps will not be combineable, as before. Instead, they will update with new information as the player travels. While in the player's inventory, the map will display a minimap on the corner of the screen. If destroyed, the player can create a new map that will have the same information.
+
+### Roofing
+
+Vanilla minecraft rooves are very frustrating to build. They require tedious placement of stairs and slabs and can result in player death and are an insane investment of materials
+
+Multiblock building components would be a nice solution. 2, 3, 4, 5, and 6 block-long stairs/slabs would make long rooves much easier to build/destroy 
+
+### Redstone Improvements
+
+- New advanced redstone components
+- Long range redstone signals
+
+### Dimensions
+
 - Interdimensional travel optional
 - Substitute recipes added
 
-## 9. Magic
+### Clocks (item)
 
-### Arcane Altar (block)
+Clocks will simply display a clock on the user's screen while in their inventory.
 
-- Create spells
+### Sieve (block)
 
-### Magic Wand (tool)
+Enable players to find small items in dirt, sand, or gravel
 
-- Use spells
+### Hammer (tool/item)
 
-## 10. Miscellaneous
+Enable players to break stone into gravel, gravel into sand
 
-### More New blocks
+### Diving Helmet (wearable/item)
 
-- Sieve - Chance of finding small items
+Enable players to breath underwater, durability reduces more the deeper you go.
 
-## 11. World-gen
+### Liquid Tank
 
-### New Biomes
+Stores one type of liquid.
 
-- Magic (special plants)
-- Evil (mobs spawn during day)
+### Scaffold
 
-### Improved biomes
+Stackable block that can be climbed like a ladder. The whole stack can be destroyed by breaking the bottom block. The stack can be raised by building on to the bottom block.
 
-- Deserts – more materials available
+### Added recipes
 
-### Trees
+- String - Made from wool
+- Horse armor - Made from armor materials
+
+### World
+
+#### World-gen
 
 - Taller trees possible
+- Increase world height - build higher, dig deeper
+- Harvestable water plants
 
-### World-height
+#### Biomes
 
-- 4x world height
-- Dig 2x deeper
-- Build 2x higher
+- Evil biome - spawns mobs during day
 
-### Flora
+- Magic biome - magical plants
 
-- New water plants
-- New plants
+- Deserts - more materials available
 
-### Fauna
+#### New mobs
 
-- Shark
-- Bird
-- Snake
+Sharks, birds, snakes, etc
 
-### Seasons
+#### Seasons
 
-- Leaves change color and fall
-- Snow
-
-## 12. New recipes for vanilla items
-
-- String
-- Saddle
-- Horse armor
+Leaves change color and fall.
