@@ -1,0 +1,18 @@
+package com.warpdragon.mcraspberry;
+
+import com.warpdragon.mcraspberry.proxy.CommonProxy;
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
+
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS);
+public class MCRaspberry {
+
+	@Instance
+	public static MCRaspberry instance;
+	
+	@SidedProxy(clientSide = Referenc	e.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
+	public static CommonProxy proxy;
+		
+}
