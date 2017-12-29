@@ -38,10 +38,6 @@
 
 - Works identically to Gravestone mod.
 
-### Hearthstone
-
-- Works identically to Citizens Townhall.
-
 ## Items
 
 ### Magic Wand
