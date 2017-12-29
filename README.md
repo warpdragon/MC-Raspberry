@@ -33,10 +33,9 @@ The project will be built on
 New features such will require particluar attention to chunk-handling. Villagers' metadata handling will have to be looked at and new AI written. This will be mechanically similar to the mod "Citizens". We're planning to implement the following features:
 
 - Right click on villagers to assign a job
-- New block: Hearthstone
-- Right click on hearthstone to assign a villager to a home
+- New blocks: Landmarks
+- Landmarks are used to bind villagers to their home and place of employment.
 - Villagers can place harvested materials in chests
-- Villagers can create new villagers
 - Hostile mobs don't spawn near villagers
 - Villagers can defend themselves against hostile mobs
 
@@ -174,7 +173,7 @@ Pork can be broken into bacon. Eggs can be cooked in a furnace. Meat and bread c
 
 - Magic biome - magical plants
 
-- Deserts - more materials available
+- Deserts - Savannah Trees have a small chance to spawn
 
 #### New mobs
 
