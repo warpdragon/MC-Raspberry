@@ -105,7 +105,7 @@ Currently, players are forced to travel to other dimensions to craft certain rec
 
 ### MISCELLANEOUS
 
-#### Blocks
+#### BLOCKS
 
 ##### Sieve
 
@@ -123,7 +123,7 @@ Stores one type of liquid.
 
 Stackable block that can be climbed like a ladder. The whole stack can be destroyed by breaking the bottom block. The stack can be raised by building on to the bottom block.
 
-#### Items
+#### ITEMS
 
 ##### Clock
 
@@ -137,7 +137,9 @@ Enable players to break stone into gravel, gravel into sand
 
 Enable players to breath underwater, durability reduces more the deeper you go.
 
+##### Miscellaneous food
 
+Pork can be broken into bacon. Eggs can be cooked in a furnace. Meat and bread can make a sandich.
 
 ### WORLD
 
