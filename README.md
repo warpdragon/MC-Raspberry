@@ -73,6 +73,20 @@ A new block called the Arcane Altar will be craftable from basic materials and i
 
 Spells include teleportation, ranged attack, ranged disable, and ranged heal.
 
+#### Emerald tools
+
+Emeralds are more rare than diamonds. A tool made from these will have a special ability:
+
+- Emerald axe - Works identically to tree-capitator
+
+- Emerald sword - Unknown
+
+- Emerald pickaxe - Unknown
+
+- Emerald shovel - Unknown
+
+- Emerald hoe - Unknown
+
 #### Maps
 
 We are replacing the vanilla map with a new one using the same recipe. Maps will not be combineable, as before. Instead, they will update with new information as the player travels. While in the player's inventory, the map will display a minimap on the corner of the screen. If destroyed, the player can create a new map that will have the same information.
