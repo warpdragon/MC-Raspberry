@@ -2,17 +2,24 @@
 
 ## Introduction
 
-It's a mod for people who dont' like the complexity of massive modpacks, but want new functionality and quality of life improvements for vanilla. It's a mod to make vanilla better. What it has: light engineering, magic, tweaks to vanilla, transportation options, construction improvements. What it doesn't have: extreme vertical progression, complicated recipes, unexplained things.
+It's a mod for people who dont' like the complexity of massive modpacks, but want new functionality and quality-of-life improvements for vanilla. It's a mod to make vanilla better. What it has: lightweight and simple engineering & magic, tweaks to vanilla, new transportation options, construction improvements, UI improvements. What it doesn't have: extreme vertical progression, complicated recipes, unexplained things.
 
-I'm not a programmer, but I can follow tutorials. The following features, taken separately, range from very simple (new recipes) to somewhat complex (new power systems, AI improvements), but they've all been done before. Every feature I'm listing has been done by either vanilla in some form or by some mod.
+The following features, taken separately, range from very simple (new recipes) to somewhat complex (new power systems, AI improvements), but they've all been done before. Every feature I'm listing has been done by either vanilla in some form or by some mod.
 
-So why not just make a modpack using existing mods? Because I would like them contained inside a single/few mod(s) built from the ground up to do exactly what we want, and only what we want. By keeping everything in a lightweight package, we can achieve increased performance over other modpacks which will allow for the use of GL shaders and high-res texture packs.
+So why not just make a modpack using existing mods? Having the features we need contained inside a single/few mod(s) built from the ground up to do exactly what we want, and only what we want keeps everything very light weight. By keeping everything in a lightweight package, we can achieve increased performance over other modpacks which will allow for the use of GL shaders and high-res texture packs.
 
 # Project Outline
 
 ## Performance
 
-The project will probably be based on whichever version of Minecraft has the latest Forge (currently 1.11.2). Due to the lightweight nature of the project, higher-end computers should be able to make use of Optifine's GL Shader support as well as Minecraft's high-resolution texture support. For added performance, we will want to stack a few mods on top of the installation:
+The project will be built on 
+- Minecraft 1.11.2
+- Forge (1.11.2 - 13.20.1.2386)
+- Java SE Development Kit 8
+- Eclipse Oxygen
+
+ For added performance, we will want to stack a few mods on top of the installation:
+
 - Optifine
 - Fastcraft
 - Foamfix
@@ -23,13 +30,21 @@ The project will probably be based on whichever version of Minecraft has the lat
 
 #### Villager AI
 
-New features such will require particluar attention to chunk-handling. Villagers and their metadata may have to be handled in new ways to support AI, an example of a mod that features villager AI is "Citizens".
+New features such will require particluar attention to chunk-handling. Villagers' metadata handling will have to be looked at and new AI written. This will be mechanically similar to the mod "Citizens". We're planning to implement the following features:
+
+- Right click on villagers to assign a job
+- New block: Hearthstone
+- Right click on hearthstone to assign a villager to a home
+- Villagers can place harvested materials in chests
+- Villagers can create new villagers
+- Hostile mobs don't spawn near villagers
+- Villagers can defend themselves against hostile mobs
 
 #### Conduits
 
-Currently, Vanilla minecraft has no pipe, wire, or conduit system. The introduction of such a system would require some very high-level logic regarding memory handling. The proposed system would be mechanically identical to Extra Utilities pipes.
+Currently, Vanilla minecraft has no pipe, wire, or conduit system. The introduction of such a system would require some very high-level programming logic regarding memory handling and such things. The proposed system would be mechanically identical to Extra Utilities pipes.
 
-Conduits would be easily crafted from iron and glass. Special connectors (referred to as nodes in EU) would give conduits the ability to do the following:
+Conduits are be easily crafted from iron and glass. Special connectors (referred to as nodes in EU) would give conduits the ability to do the following:
 - item connectors - pull from adjacent inventories and search for connected inventories to deposit them into
 - liquid connectors - pull liquid from adjacent blocks and search for connected tanks to deposit them into
 - power connectors - pull power (watts) from adjacent blocks and search for connected batteries or machines to deposit it into
@@ -62,7 +77,7 @@ We are replacing the vanilla map with a new one using the same recipe. Maps will
 
 #### Redstone Improvements
 
-- New advanced redstone components
+- New advanced redstone blocks like timers
 - Long range redstone signals
 - Custom Command Blocks
 
@@ -70,7 +85,7 @@ We are replacing the vanilla map with a new one using the same recipe. Maps will
 
 Vanilla minecraft rooves are very frustrating to build. They require tedious placement of stairs and slabs and can result in player death and are an insane investment of materials
 
-Multiblock building components would be a nice solution. 2, 3, 4, 5, and 6 block-long stairs/slabs would make long rooves much easier to build/destroy 
+Multiblock building components would be a nice solution. n-length stairs/slabs would make long rooves much easier to place/replace.
 
 #### Vehicles
 
