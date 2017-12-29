@@ -8,6 +8,9 @@ The following features, taken separately, range from very simple (new recipes) t
 
 So why not just make a modpack using existing mods? Having the features we need contained inside a single/few mod(s) built from the ground up to do exactly what we want, and only what we want keeps everything very light weight. By keeping everything in a lightweight package, we can achieve increased performance over other modpacks which will allow for the use of GL shaders and high-res texture packs.
 
+[Assets][1]
+
+
 # Project Outline
 
 ## Performance
@@ -182,3 +185,5 @@ Sharks, birds, snakes, etc
 #### Seasons
 
 Leaves change color and fall.
+
+[1]: docs/assets.md
