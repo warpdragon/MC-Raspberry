@@ -107,6 +107,10 @@ Currently, players are forced to travel to other dimensions to craft certain rec
 
 #### BLOCKS
 
+##### Gravestone
+
+When you die your inventory is stored in a gravestone. Attack it to retrieve your inventory. Gravestones are immune to all other damage.
+
 ##### Sieve
 
 Enable players to find small items in dirt, sand, or gravel
